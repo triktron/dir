@@ -1,0 +1,12 @@
+@charset "utf-8";
+/* CSS Document */
+
+#text_ar_1
+{
+background-color: transparent; 
+border-style: none;
+border-color: Transparent;
+overflow: auto;
+outline: none;
+width:99%;
+}
