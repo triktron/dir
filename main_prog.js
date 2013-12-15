@@ -15,8 +15,9 @@ var items = [["hallo","#0000CD"],["world","#008000"],["raf","Transparent"],["emm
 //--------------- functie's ------------------------------
 function update_show() {
 	var temp_text = text_ar_1.value;
-	setCookie("docu_temp",temp_text,1);
-	
+	if (temp_text.length > 0) {
+		setCookie("docu_temp",temp_text,1);
+	}
 	for (var i = 0;i<items.length;i++) {
 		temp_text = temp_text.replace(items[i][0],"<span style='color: "+items[i][1]+"'>"+items[i][0]+"</span>");
 	}
