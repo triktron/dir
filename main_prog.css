@@ -3,11 +3,22 @@
 
 #text_ar_1
 {
+font-size:100%;
+position:absolute;
 background-color: transparent; 
 border-style: none;
 border-color: Transparent;
+color:Transparent;
 overflow: auto;
 outline: none;
+width:99%;
+top:20px;
+bottom:0px;
+}
+#text_sh_1
+{
+font-size:100%;
+position:absolute;
 width:99%;
 top:20px;
 bottom:0px;
