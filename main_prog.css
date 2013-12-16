@@ -3,7 +3,7 @@
 
 #text_ar_1
 {
-font-size:100%;
+font-size:90%;
 position:absolute;
 background-color: transparent; 
 border-style: none;
@@ -11,15 +11,19 @@ border-color: Transparent;
 color:Transparent;
 overflow: auto;
 outline: none;
-width:99%;
-top:20px;
+left:0px;
+right:0px;
+top:21px;
 bottom:0px;
+font-family:"Times New Roman",Times,serif;
 }
 #text_sh_1
 {
-font-size:100%;
+font-size:90%;
 position:absolute;
-width:99%;
-top:20px;
+right:0px;
+top:25px;
+left:4px;
 bottom:0px;
+font-family:"Times New Roman",Times,serif;
 }

@@ -18,6 +18,10 @@ function update_show() {
 	if (temp_text.length > 0) {
 		setCookie("docu_temp",temp_text,1);
 	}
+	var temp = getCaret(text_ar_1)
+	
+	temp_text = temp_text.substring(0,temp) + "|" + temp_text.substring(temp,temp_text.length);
+	
 	for (var i = 0;i<items.length;i++) {
 		temp_text = temp_text.replace(items[i][0],"<span style='color: "+items[i][1]+"'>"+items[i][0]+"</span>");
 	}
@@ -28,6 +32,38 @@ function update_show() {
 
 function on_close() {
 	chat.close();
+}
+
+function getCaret(el) {
+if (el.selectionStart) { 
+return el.selectionStart; 
+} else if (document.selection) { 
+el.focus(); 
+
+var r = document.selection.createRange(); 
+if (r == null) { 
+return 0; 
+} 
+
+var re = el.createTextRange(), 
+rc = re.duplicate(); 
+re.moveToBookmark(r.getBookmark()); 
+rc.setEndPoint('EndToStart', re); 
+
+var add_newlines = 0;
+for (var i=0; i<rc.text.length; i++) {
+if (rc.text.substr(i, 2) == '\r\n') {
+add_newlines += 2;
+i++;
+}
+}
+
+//return rc.text.length + add_newlines;
+
+//We need to substract the no. of lines
+return rc.text.length - add_newlines; 
+} 
+return 0; 
 }
 
 //--------------- cookie api ------------------------------
