@@ -25,6 +25,7 @@ function update_show() {
 	for (var i = 0;i<items.length;i++) {
 		temp_text = temp_text.replace(items[i][0],"<span style='color: "+items[i][1]+"'>"+items[i][0]+"</span>");
 	}
+	temp_text = temp_text.replace(/\r?\n/g, '<br/>');
 	text_sh_1.innerHTML = temp_text;
 	
 	setTimeout(function(){update_show()},1000/30);
