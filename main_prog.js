@@ -102,11 +102,6 @@ return c_value;
 
 //--------------- startup ---------------------------------
 update_show();
-video_chat = confirm("want to join chat");
-if (video_chat==true) {
-	chat = window.open("","MsgWindow","width=200,height=200");
-	chat.document.write("hallo");
-}
 var temp = getCookie("docu_temp");
 if (temp != null) {
 	text_ar_1.value = temp;

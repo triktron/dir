@@ -8,7 +8,29 @@
 </head>
 
 <body onbeforeunload="on_close()">
-<div id="option_bar_top"><div id="option_bar_top_text"><butt class="button">Bustand   </butt><butt class="button">Bewerken   </butt></div></div>
+<div id="menuh-container">
+<div id="menuh">
+	<ul>
+		<li><a href="#" class="top_parent">File</a>
+		<ul>
+			<li><a href="#">new</a></li>
+            <li><a href="#">open</a></li>
+            <li><a href="#">save</a></li>
+            <li><a href="#">save all</a></li>
+		</ul>
+		</li>
+	</ul>
+	<ul>
+		<li><a href="#" class="top_parent">info</a>
+		<ul>
+			<li><a href="#">start chat</a></li>
+            <li><a href="#" onClick="window.open("","MsgWindow","_blank").focus();">help</a></li>
+		</ul>
+		</li>
+	</ul>
+	
+</div> 	<!-- end the menuh-container div -->  
+</div>	<!-- end the menuh div --> 
 <div id="text_sh_1"></div>
 <textarea id="text_ar_1" spellcheck="false"></textarea>
 </body>
